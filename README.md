@@ -4,6 +4,8 @@ A new Flutter project.
 
 ## Getting Started
 
+To Run this App First Clone/Download the Code and open Folder in your VS code and the Run Flutter pub get and then hit enter BOOOOM now run the Code im your Device.
+
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
