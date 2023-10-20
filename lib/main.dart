@@ -1,7 +1,7 @@
 // import 'package:app/user/splashscree.dart';
 // import 'package:app/user/splashscree.dart';
 // ignore_for_file: unused_import
-
+import 'package:app/Admin/adminDashboard.dart';
 import 'package:app/loader.dart';
 import 'package:app/user/splashscree.dart';
 import 'package:flutter/material.dart';

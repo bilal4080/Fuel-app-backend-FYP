@@ -90,19 +90,23 @@ class _RecentOrderState extends State<RecentOrder> {
               var name = data?["name"];
 
               return Card(
+                color: Color(0xff282828),
                 elevation: 2,
                 margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: ListTile(
-                  leading: Icon(Icons.shopping_cart),
+                  leading: Icon(
+                    Icons.shopping_cart,
+                    color: Colors.white,
+                  ),
                   title: Row(
                     children: [
                       Expanded(
                         child: Text(
                           "Order $order",
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              color: Colors.white),
                         ),
                       ),
                       // IconButton(
@@ -119,15 +123,14 @@ class _RecentOrderState extends State<RecentOrder> {
                       Text(
                         formatRequestTime(request_time),
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontStyle: FontStyle.italic,
                         ),
                       ),
                       Text(
                         date!, // Use the null operator to handle null values
                         style: TextStyle(
-                          fontStyle: FontStyle.italic,
-                        ),
+                            fontStyle: FontStyle.italic, color: Colors.white),
                       ),
                       if (data?['orderstate'] == 0 || data?['orderstate'] == 1)
                         ElevatedButton(
@@ -164,13 +167,13 @@ class _RecentOrderState extends State<RecentOrder> {
                       Text(
                         'Name: $name', // Use the null operator to handle null values
                         style: TextStyle(
-                          color: Colors.green,
+                          color: Colors.blue,
                         ),
                       ),
                       Text(
                         'Amount: ${price?.toStringAsFixed(2) ?? ''}', // Use the null operator to handle null values
                         style: TextStyle(
-                          color: Colors.green,
+                          color: Colors.blue,
                         ),
                       ),
                     ],

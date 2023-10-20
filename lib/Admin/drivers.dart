@@ -95,7 +95,7 @@ class _DriverState extends State<Driver> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "All Users",
+          "Drivers",
           style: TextStyle(color: Colors.white),
         ),
         iconTheme: IconThemeData(
@@ -129,20 +129,17 @@ class _DriverState extends State<Driver> {
                   var userCheckuser = user["checkuser"] as int;
 
                   return Card(
+                    color: Color(0xff282828),
                     elevation: 2,
                     margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     child: ListTile(
                       leading: Container(
                         width: 50,
                         alignment: Alignment.topLeft,
-                        child: CircleAvatar(
-                          radius: 80,
-                          backgroundColor: Colors.grey,
-                          child: Icon(
-                            Icons.person,
-                            size: 40,
-                            color: Colors.white,
-                          ),
+                        child: Icon(
+                          Icons.person,
+                          size: 40,
+                          color: Colors.white,
                         ),
                       ),
                       title: Row(
@@ -151,6 +148,7 @@ class _DriverState extends State<Driver> {
                             child: Text(
                               "  Name:$username",
                               style: TextStyle(
+                                color: Colors.white,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 16,
                               ),
@@ -167,8 +165,12 @@ class _DriverState extends State<Driver> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text("Email: $email"),
-                                  Text("Contact: $phone"),
+                                  Text(
+                                    "Email: $email",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                  Text("Contact: $phone",
+                                      style: TextStyle(color: Colors.white)),
                                   ElevatedButton(
                                     onPressed: () {},
                                     child: Padding(

@@ -223,12 +223,13 @@ class _FuelAppDashboardState extends State<FuelAppDashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Color(0xff282828),
       appBar: AppBar(
         iconTheme: IconThemeData(
           color: Colors.white,
         ),
         title: Text(
-          'Fuel App',
+          'Admin Dashboard',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.orange,
@@ -320,8 +321,8 @@ class _FuelAppDashboardState extends State<FuelAppDashboard> {
               endIndent: 16,
             ),
             ListTile(
-              leading: const Icon(Icons.payment),
-              title: const Text('Payment'),
+              leading: const Icon(Icons.report),
+              title: const Text('Reports'),
               onTap: () {
                 Navigator.push(
                   context,
@@ -374,22 +375,23 @@ class _FuelAppDashboardState extends State<FuelAppDashboard> {
       ),
       body: Column(
         children: [
-          Container(
-            padding: EdgeInsets.all(16),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: 'Search for fuel stations',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-              onChanged: (value) {
-                setState(() {
-                  searchInput = value;
-                });
-              },
-            ),
-          ),
+          // Container(
+          //   padding: EdgeInsets.all(16),
+          //   child: TextField(
+          //     decoration: InputDecoration(
+          //       hintText: 'Search...',
+
+          //       border: OutlineInputBorder(
+          //         borderRadius: BorderRadius.circular(8),
+          //       ),
+          //     ),
+          //     onChanged: (value) {
+          //       setState(() {
+          //         searchInput = value;
+          //       });
+          //     },
+          //   ),
+          // ),
           SizedBox(height: 16),
           Text(
             'Fuel Stations',
@@ -398,11 +400,11 @@ class _FuelAppDashboardState extends State<FuelAppDashboard> {
               fontSize: 20,
             ),
           ),
-          Divider(
-            thickness: 2,
-            indent: 16,
-            endIndent: 16,
-          ),
+          // Divider(
+          //   thickness: 2,
+          //   indent: 16,
+          //   endIndent: 16,
+          // ),
           Expanded(
             child: StreamBuilder<QuerySnapshot>(
                 stream: FirebaseFirestore.instance
@@ -500,11 +502,11 @@ class _FuelAppDashboardState extends State<FuelAppDashboard> {
               fontSize: 20,
             ),
           ),
-          Divider(
-            thickness: 2,
-            indent: 16,
-            endIndent: 16,
-          ),
+          // Divider(
+          //   thickness: 2,
+          //   indent: 16,
+          //   endIndent: 16,
+          // ),
           Expanded(
             child: StreamBuilder<QuerySnapshot>(
                 stream: FirebaseFirestore.instance
@@ -606,27 +608,27 @@ class _FuelAppDashboardState extends State<FuelAppDashboard> {
                             child: Column(
                               children: [
                                 Text(
-                                  'Name: $name', // Use the null operator to handle null values
+                                  'Name: $name',
                                   style: TextStyle(
-                                    color: Colors.green,
+                                    color: Colors.blue,
                                   ),
                                 ),
                                 Text(
-                                  fuletype!, // Use the null operator to handle null values
+                                  fuletype!,
                                   style: TextStyle(
-                                    color: Colors.green,
+                                    color: Colors.blue,
                                   ),
                                 ),
                                 Text(
-                                  "Car no:$carno", // Use the null operator to handle null values
+                                  "Car no:$carno",
                                   style: TextStyle(
-                                    color: Colors.green,
+                                    color: Colors.blue,
                                   ),
                                 ),
                                 Text(
-                                  'Amount: ${price?.toStringAsFixed(2) ?? ''}', // Use the null operator to handle null values
+                                  'Amount: ${price?.toStringAsFixed(2) ?? ''}',
                                   style: TextStyle(
-                                    color: Colors.green,
+                                    color: Colors.blue,
                                   ),
                                 ),
                               ],

@@ -14,6 +14,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:connectivity/connectivity.dart';
 
 import 'help.dart';
 // Import the sign-in screen file
@@ -29,7 +30,6 @@ class _UserDashboardScreenState extends State<UserDashboardScreen> {
   String? userId;
   String? username;
   String? email;
-
   final auth = FirebaseAuth.instance;
 
   @override
@@ -82,7 +82,7 @@ class _UserDashboardScreenState extends State<UserDashboardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange,
+        backgroundColor: const Color.fromRGBO(255, 152, 0, 1),
         iconTheme: IconThemeData(
           color: Colors.white,
         ),

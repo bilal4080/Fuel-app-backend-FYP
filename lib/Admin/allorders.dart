@@ -96,21 +96,32 @@ class _allOrderState extends State<allOrder> {
               var phone = data?["phoneNo"];
               var carno = data?["carNo"];
               var name = data?["name"];
-
-              return Card(
-                elevation: 2,
+              return Container(
+                decoration: BoxDecoration(
+                  color: Color(0xff282828),
+                  borderRadius: BorderRadius.circular(
+                      12), // Adjust the radius for round edges
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 2,
+                      blurRadius: 5,
+                      offset: Offset(0, 2),
+                    ),
+                  ],
+                ),
                 margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: ListTile(
-                  leading: Icon(Icons.shopping_cart),
+                  leading: Icon(Icons.shopping_cart, color: Colors.white),
                   title: Row(
                     children: [
                       Expanded(
                         child: Text(
                           "Order $order",
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              color: Colors.white),
                         ),
                       ),
                     ],
@@ -121,13 +132,14 @@ class _allOrderState extends State<allOrder> {
                       Text(
                         formatRequestTime(request_time),
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontStyle: FontStyle.italic,
                         ),
                       ),
                       Text(
                         date!, // Use the null operator to handle null values
                         style: TextStyle(
+                          color: Colors.white,
                           fontStyle: FontStyle.italic,
                         ),
                       ),
@@ -321,25 +333,25 @@ class _allOrderState extends State<allOrder> {
                         Text(
                           'Name: $name', // Use the null operator to handle null values
                           style: TextStyle(
-                            color: Colors.green,
+                            color: Colors.blue,
                           ),
                         ),
                         Text(
                           fuletype!, // Use the null operator to handle null values
                           style: TextStyle(
-                            color: Colors.green,
+                            color: Colors.white,
                           ),
                         ),
                         Text(
                           "Car no:$carno", // Use the null operator to handle null values
                           style: TextStyle(
-                            color: Colors.green,
+                            color: Colors.blue,
                           ),
                         ),
                         Text(
                           'Amount: ${price?.toStringAsFixed(2) ?? ''}', // Use the null operator to handle null values
                           style: TextStyle(
-                            color: Colors.green,
+                            color: Colors.blue,
                           ),
                         ),
                       ],

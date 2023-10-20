@@ -132,20 +132,16 @@ class _allUsersState extends State<allUsers> {
                   var warden = user["checkuser"] as int;
 
                   return Card(
-                    elevation: 2,
+                    color: Color(0xff282828),
                     margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     child: ListTile(
                       leading: Container(
                         width: 50,
                         alignment: Alignment.topLeft,
-                        child: CircleAvatar(
-                          radius: 80,
-                          backgroundColor: Colors.grey,
-                          child: Icon(
-                            Icons.person,
-                            size: 40,
-                            color: Colors.white,
-                          ),
+                        child: Icon(
+                          Icons.person,
+                          size: 40,
+                          color: Colors.white,
                         ),
                       ),
                       title: Row(
@@ -154,9 +150,9 @@ class _allUsersState extends State<allUsers> {
                             child: Text(
                               "  Name:$username",
                               style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
-                              ),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                  color: Colors.white),
                             ),
                           ),
                         ],
@@ -170,8 +166,12 @@ class _allUsersState extends State<allUsers> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text("Email: $email"),
-                                  Text("Contact: $phone"),
+                                  Text(
+                                    "Email: $email",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                  Text("Contact: $phone",
+                                      style: TextStyle(color: Colors.white)),
                                   warden == 0
                                       ? ElevatedButton(
                                           onPressed: () {},

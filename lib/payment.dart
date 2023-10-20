@@ -20,7 +20,7 @@ class _PaymentState extends State<Payment> {
           color: Colors.white,
         ),
         title: Text(
-          'Monthly Payments',
+          'Monthly Payments Report',
           style: TextStyle(color: Colors.white),
         ),
       ),
@@ -47,7 +47,7 @@ class _PaymentState extends State<Payment> {
                   if (documents.isEmpty) {
                     return Center(
                       child: Text(
-                        'No fule order yet.',
+                        'No fuel order yet this month.',
                         style: TextStyle(fontSize: 16),
                       ),
                     );
@@ -64,44 +64,58 @@ class _PaymentState extends State<Payment> {
                       var year = data?["year"];
                       var total = data?["payment"];
 
-                      return Card(
-                        elevation: 2,
+                      return Container(
+                        decoration: BoxDecoration(
+                          color: Color(0xff282828),
+                          borderRadius: BorderRadius.circular(
+                              12), // Adjust the radius for round edges
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: Offset(0, 2),
+                            ),
+                          ],
+                        ),
                         margin:
                             EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                         child: ListTile(
-                          leading: Icon(Icons.paypal),
+                          leading: Icon(
+                            Icons.payment,
+                            color: Colors.white,
+                          ),
                           title: Row(
                             children: [
                               Expanded(
                                 child: Text(
                                   "$Month $year",
                                   style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                  ),
+                                      fontSize: 16, color: Colors.white),
                                 ),
                               ),
                             ],
                           ),
-                          subtitle: Text("Total: $total .Rs"),
+                          subtitle: Text("Total sale: $total Rs",
+                              style: TextStyle(color: Colors.white)),
                           trailing: Column(
                             children: [
                               Text(
                                 "Gasoline: ${data?["gas"]}.00 kg", // Use the null operator to handle null values
                                 style: TextStyle(
-                                  color: Colors.green,
+                                  color: Colors.white,
                                 ),
                               ),
                               Text(
-                                "Petrol: ${data?["patrol"]}.00 Liters", // Use the null operator to handle null values
+                                "Petrol: ${data?["petrole"]}.00 Liters", // Use the null operator to handle null values
                                 style: TextStyle(
-                                  color: Colors.green,
+                                  color: Colors.white,
                                 ),
                               ),
                               Text(
                                 "Diesel: ${data?["desile"]}.00 Liters", // Use the null operator to handle null values
                                 style: TextStyle(
-                                  color: Colors.green,
+                                  color: Colors.white,
                                 ),
                               ),
                             ],
