@@ -71,11 +71,12 @@ class _OrderScreenState extends State<order> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Text('Order Fuel'),
-        iconTheme: IconThemeData(
-          color: Colors.white,
+        backgroundColor: Colors.orange,
+        title: Text(
+          'Order Fuel',
+          style: TextStyle(color: Colors.white),
         ),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Padding(
         padding: EdgeInsets.all(20),
@@ -182,6 +183,14 @@ class _OrderScreenState extends State<order> {
                         ],
                       ),
                       SizedBox(height: 20),
+                      // Text(
+                      //   'Order Detail',
+                      //   style: TextStyle(
+                      //     fontSize: 20,
+                      //     fontWeight: FontWeight.w200,
+                      //   ),
+                      // ),
+
                       Text(
                         'Order Detail',
                         style: TextStyle(
@@ -190,6 +199,20 @@ class _OrderScreenState extends State<order> {
                         ),
                       ),
                       SizedBox(height: 10),
+                      TextField(
+                        controller: carNoController,
+                        decoration: InputDecoration(
+                          hintText: 'Enter your Name here',
+                          border: OutlineInputBorder(),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.orange),
+                          ),
+                        ),
+                        maxLines: 1,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       TextField(
                         controller: carNoController,
                         decoration: InputDecoration(
@@ -320,7 +343,7 @@ class _OrderScreenState extends State<order> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Icon(
-                                    Icons.ev_station,
+                                    Icons.electric_car_outlined,
                                     size: 30,
                                     color: selectedFuelType == 1
                                         ? Colors.orange
@@ -328,7 +351,7 @@ class _OrderScreenState extends State<order> {
                                   ),
                                   SizedBox(height: 5),
                                   Text(
-                                    'Gasoline',
+                                    'High Octane',
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,

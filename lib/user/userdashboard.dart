@@ -486,7 +486,13 @@ class _UserDashboardScreenState extends State<UserDashboardScreen> {
                   ),
                 ),
               ),
-            )
+            ),
+            Container(
+              child: Text(
+                "Emergency Contact:0311-9928222",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
           ],
         ),
       ),

@@ -11,9 +11,7 @@ import 'user/userdashboard.dart';
 
 void main() async {
   // Ensure that Flutter is initialized.
-
   WidgetsFlutterBinding.ensureInitialized();
-
   // Initialize Firebase.
   await Firebase.initializeApp();
   // Continue with the rest of your application setup.

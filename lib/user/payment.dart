@@ -235,22 +235,22 @@ class _CheckoutScreenState extends State<Paymet_next> {
                             ),
                             title: Text('Cash on Delivery'),
                           ),
-                          ListTile(
-                            leading: Radio(
-                              value: true,
-                              groupValue: isEasypaisaSelected,
-                              onChanged: (value) {
-                                setState(() {
-                                  isEasypaisaSelected = value as bool;
-                                  isCashOnDeliverySelected = !value;
-                                });
-                              },
-                              activeColor: Colors.orange,
-                            ),
-                            title: Text('Easypaisa'),
-                          ),
-                          if (isEasypaisaSelected)
-                            Text('We are working on it to Ease your assurance'),
+                          // ListTile(
+                          //   leading: Radio(
+                          //     value: true,
+                          //     groupValue: isEasypaisaSelected,
+                          //     onChanged: (value) {
+                          //       setState(() {
+                          //         isEasypaisaSelected = value as bool;
+                          //         isCashOnDeliverySelected = !value;
+                          //       });
+                          //     },
+                          //     activeColor: Colors.orange,
+                          //   ),
+                          //   title: Text('Easypaisa'),
+                          // ),
+                          // if (isEasypaisaSelected)
+                          //   Text('We are working on it to Ease your assurance'),
                         ],
                       ),
                     )

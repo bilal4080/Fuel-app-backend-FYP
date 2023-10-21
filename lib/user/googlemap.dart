@@ -24,7 +24,7 @@ class MapSampleState extends State<MapSample> {
   String _currentLocationAddress = '';
 
   static const CameraPosition _kGooglePlex = CameraPosition(
-    target: LatLng(37.42796133580664, -122.085749655962),
+    target: LatLng(33.84686466020412, -122.085749655962),
     zoom: 14.4746,
   );
 
