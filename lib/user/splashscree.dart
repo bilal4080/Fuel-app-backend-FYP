@@ -60,6 +60,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                         // Add your desired widget here
                       ),
                     ),
+                    // Image.asset('images/Logo App.png', width: 70, height: 50),
                     const SizedBox(height: 100),
                     const Text(
                       'Fuel Mate',
